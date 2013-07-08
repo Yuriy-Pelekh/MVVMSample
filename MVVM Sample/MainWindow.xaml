@@ -1,0 +1,15 @@
+﻿<Window x:Class="MVVM_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:MVVM_Sample="clr-namespace:MVVM_Sample"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Canvas Margin="10" Background="AliceBlue" MouseMove="Canvas_MouseMove">
+            <MVVM_Sample:DragControl
+                Canvas.Left="{Binding Position.X, Mode=TwoWay}"
+                Canvas.Top="{Binding Position.Y, Mode=TwoWay}"
+                MouseLeftButtonDown="DragControl_MouseLeftButtonDown"
+                MouseLeftButtonUp="DragControl_MouseLeftButtonUp" />
+        </Canvas>
+    </Grid>
+</Window>
